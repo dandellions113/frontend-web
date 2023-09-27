@@ -80,10 +80,10 @@ function Login() {
           <div className="absolute opacity-60 inset-0 z-0 bg-black"></div>
           <div className="w-full px-24 z-10 text-white">
             <h1 className="text-5xl font-bold text-left tracking-wide">
-              Keep it special
+              Stay informed, stay connected
             </h1>
             <p className="text-3xl my-4 ">
-              Capture your personal memory in unique way, anywhere.
+              Join the feedback revolution, log in now!
             </p>
           </div>
         </div>
