@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom"; // If using React Router
 import { getCookie } from "../Utils/cookieUtils";
+import Navbar from "../components/Navbar";
 
 // Dummy data for a news article
 const articleData = {

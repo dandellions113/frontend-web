@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import authAxiosInstance from "../api/authAxiosInstance";
 import { getCookie } from "../Utils/cookieUtils";
 import toast from "react-hot-toast";
+import Navbar from "../components/Navbar";
 
 function Signup() {
   const [formData, setFormData] = useState({
