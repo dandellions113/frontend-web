@@ -1,20 +1,19 @@
 /* eslint-disable react/prop-types */
 export default function NewsItem({ news }) {
-    const getBorder = () => {
-        if (news.sentiment == "Negative") {
+    const getStyles = () => {
+        if (news.sentiment == "negative") {
             return " bg-red-50 ";
         }
-        if (news.sentiment == "Positive") {
+        if (news.sentiment == "positive") {
             return " bg-green-50";
         }
-        if (news.sentiment == "Neutral") {
+        if (news.sentiment == "neutral") {
             return " bg-blue-50";
         }
     };
-    // bg-gradient-to-r from-green-300 via-blue-500 to-purple-600
     return (
         <div
-            className={`relative overflow-hidden rounded-lg border border-gray-200 p-4 sm:p-6 lg:p-8 h-full flex-col shadow-xl ${getBorder()} hover:scale-105 transition-all duration-300`}
+            className={`relative overflow-hidden rounded-lg border border-gray-200 p-4 sm:p-6 lg:p-8 h-full flex-col shadow-xl ${getStyles()} hover:scale-105 transition-all duration-300`}
         >
             <span className="absolute inset-x-0 bottom-0 h-2 "></span>
 
@@ -33,9 +32,9 @@ export default function NewsItem({ news }) {
                     <img
                         alt="News"
                         src={
-                            news.image
-                                ? news.image
-                                : "https://images.pexels.com/photos/159652/table-food-book-newspaper-159652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            news.cms
+                                ? "https://images.pexels.com/photos/159652/table-food-book-newspaper-159652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                : news.Img
                         }
                         className="h-28 w-28 rounded-lg object-cover shadow-sm"
                     />
@@ -44,23 +43,20 @@ export default function NewsItem({ news }) {
 
             <div className="mt-4">
                 <p className="text-sm text-gray-500">
-                    {news.Description.split(" ").slice(0, 30).join(" ")}{" "}
-                    <a
-                        href={news.Link}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-blue-500 hover:text-blue-700"
-                    >
+                    {news.Description.length > 0 &&
+                        news.Description.split(" ").slice(0, 40).join(" ")}{" "}
+                    <span className="text-blue-500 hover:text-blue-700">
                         Continue reading...
-                    </a>
+                    </span>
                 </p>
             </div>
 
             <dl className="flex gap-4 sm:gap-6 mt-5">
                 <div className="flex flex-col-reverse">
                     <dt className="text-sm font-medium text-gray-600">
-                        {news.sentiment.charAt(0).toUpperCase() +
-                            news.sentiment.slice(1)}
+                        {/* {news.sentiment.charAt(0).toUpperCase() +
+                            news.sentiment.slice(1)} */}
+                        Neutral
                     </dt>
                     <dd className="text-sm text-gray-500">Sentiment</dd>
                 </div>
