@@ -4,7 +4,7 @@ import { getCookie } from "../Utils/cookieUtils";
 
 // Dummy data for a news article
 const articleData = {
-  title: "Lorem Ipsum News 1",
+  title: "How to design a website (step-by-step guide)",
   source: "Lorem Ipsum Source 1",
   summary:
     "Summary of news article 1 goes here. It provides a brief overview of the content.",
@@ -50,7 +50,7 @@ function ArticlePage() {
   return (
     <div className="bg-gray-100 min-h-screen p-4">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-semibold text-center mb-8">
+        <h1 className="sm:text-5xl text-4xl font-bold  my-8">
           {articleData.title}
         </h1>
         <div className="bg-white rounded shadow-md p-4">
@@ -61,16 +61,20 @@ function ArticlePage() {
           />
           <p className="text-gray-600 mb-2">{articleData.source}</p>
           <div className="mb-2">
-            <div className={`font-semibold `}>Date: {articleData.date}</div>
+            <div className={`font-semibold `}>
+              Date:<span className="font-bold"> {articleData.date} </span>
+            </div>
           </div>
           <div className="mb-2">
-            <div className={`font-semibold`}>Region: {articleData.region}</div>
+            <div className={`font-semibold`}>
+              Region: <span className="font-bold"> {articleData.region}</span>
+            </div>
           </div>
           <div className="my-6">
             <span
               className={`font-semibold ${
                 articleData.sentiment === "Negative"
-                  ? "bg-red-500 text-white rounded-lg font-bold px-3 py-2"
+                  ? "bg-red-500 text-white rounded-full font-bold px-3 py-2"
                   : ""
               }`}
             >

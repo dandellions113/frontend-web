@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import authAxiosInstance from "../api/authAxiosInstance";
 import { getCookie, setCookie } from "../Utils/cookieUtils";
+import toast from "react-hot-toast";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,7 @@ function Login() {
     const jwtToken = getCookie("jwtToken");
     if (jwtToken) {
       // Redirect to the desired page
+
       navigate("/news");
     }
   }, []);
@@ -44,10 +46,15 @@ function Login() {
       const jwtToken = response.data.token;
       setCookie("jwtToken", jwtToken);
       console.log(jwtToken);
+      toast.success("Logged In Successfully");
       navigate("/news");
     } catch (error) {
       // Handle error response (You can add your error handling logic here)
       console.error("Login error:", error);
+      toast.error("Something went wrong", {
+        duration: 4000,
+        position: "top-right",
+      });
     }
   };
 
