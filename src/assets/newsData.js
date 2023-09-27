@@ -1,135 +1,210 @@
 export const newsData = [
     {
-        id: 1,
-        title: "Lorem Ipsum News 1",
-        source: "Lorem Ipsum Source 1",
-        summary:
-            "Summary of news article 1 goes here. It provides a brief overview of the content.",
-        image: "https://images.indianexpress.com/2020/05/sports-stars-in-lockdown.jpg", // Replace with actual image URLs
-        date: "2023-09-1",
-        region: "Europe",
-        sentiment: "Neutral",
+        Headline: "Oil prices a concern but not alarming yet: finance ministry",
+        Timestamp: "TNN / Sep 23, 2023, 04:46 (IST)",
+        Description:
+            "The Indian government, in its August economic report, expressed comfort with a projected 6.5% growth for 2023-24. It acknowledged concerns about rising global crude oil prices and the August monsoon deficit but highlighted positive factors like corporate profitability, private sector investments, and construction activity. While it recognized risks like a stock market correction and geopolitical developments, it believed that the impact on India's economic activity would likely be limited.",
+        Link: "https://timesofindia.indiatimes.com/business/india-business/oil-prices-a-concern-but-not-alarming-yet-finance-ministry/articleshow/103877620.cms",
+        content:
+            'NEW DELHI: The government is comfortable with its estimate of 6.5% growth for 2023-24 but the recent surge in global crude oil prices is a concern although not alarming yet, the finance ministry\'s monthly economic report for August said on Thursday."As always, risks remain. Crude oil prices are steadily climbing. The monsoon deficit in August could impact both Kharif and Rabi crops. That needs to be assessed. However, it is heartening that rains in September have erased a portion of the rainfall deficit at the end of August," said the report."A stock market correction, in the wake of an overdue global stock market correction, is an ever-present risk. Offsetting these risks are the bright spots of corporate profitability, private sector capital formation, bank credit growth and activity in the construction sector," it said.The report said that India\'s economic outlook for FY24 remains bright and economic activity maintained its momentum. It further said that high frequency indicators suggest that the second quarter of FY24 is shaping up well too. The monsoon deficit of August has been partially plugged in September and that is good news. "Prices of selected food items that drove the inflation rate above 7% in July are on the retreat. Private sector is in good health as data on advance tax payments for the second quarter confirm. They are investing," the report said.The report said the risks of a stock market correction and geopolitical developments could potentially hurt investment sentiment in the second half of the financial year. "But, the impact of these developments on underlying economic activity in India should be relatively contained," said the report prepared by the department of economic affairs.It said the structural reforms undertaken for promoting ease of doing business, logistical efficiency, and infrastructure creation are accelerating job creation and formalisation of the economy. "The issues that unorganised workers face resulted in the creation of a comprehensive database of e-Shram Portal (with more than 29 crore registrations) and a host of customised social security schemes," the report added.',
+        sentiment: "neutral",
     },
     {
-        id: 2,
-        title: "Lorem Ipsum News 2",
-        source: "Lorem Ipsum Source 2",
-        summary:
-            "Summary of news article 2 goes here. It provides a brief overview of the content.",
-        image: "https://images.indianexpress.com/2020/05/sports-stars-in-lockdown.jpg", // Replace with actual image URLs
-        date: "2023-09-2",
-        region: "Europe",
-        sentiment: "Positive",
+        Headline:
+            "LIC employees, agents to benefit from finance ministry's steps",
+        Timestamp: "TNN / Sep 19, 2023, 06:42 (IST)",
+        Description:
+            "The finance ministry has announced measures that will benefit LIC employees and agents. They include an increase in the gratuity limit from Rs 3 lakh to Rs 5 lakh for agents, eligibility for renewal commission for reappointed agents, an expanded term insurance cover, and a uniform rate of 30% for family pension for retired employees' spouses.",
+        Link: "https://timesofindia.indiatimes.com/business/india-business/lic-employees-agents-to-benefit-from-finance-ministrys-steps/articleshow/103769496.cms",
+        content:
+            "The finance ministry on Monday announced a series of steps that will benefit around one lakh employees of LIC and 13 lakh agents of the state-run company.In the package for employees which is seen as a precursor for public sector bank employees, the finance ministry will allow an increase in the gratuity limit from Rs 3 lakh to Rs 5 lakh for LIC agents. \u00e2\u0080\u009cIt will bring substantial improvements to the working conditions and benefits of LIC agents,\u00e2\u0080\u009d an official statement said.It also provided for enabling reappointed agents to be eligible for renewal commission, a move that will provide them with increased financial stability. Currently, LIC agents are not eligible for renewal commission on any business completed under the old agency, the statement said.Further, the term insurance cover for the agents has been expanded from the existing range of Rs 3,000-10,000 to Rs 25,000-1.5 lakh. \u00e2\u0080\u009cThis enhancement in term insurance will significantly benefit the families of deceased agents, offering them a more substantial welfare benefit,\u00e2\u0080\u009d the statement said.For the spouses of retired employees, the government permitted family pension at a uniform rate of 30%. \u00e2\u0080\u009cThe welfare measures are related to the amendments to LIC (Agents) Regulations, 2017, Enhancement of Gratuity Limit, and Uniform Rate of Family Pension among others,\u00e2\u0080\u009d the government said.",
+        sentiment: "positive",
     },
     {
-        id: 3,
-        title: "Lorem Ipsum News 3",
-        source: "Lorem Ipsum Source 3",
-        summary:
-            "Summary of news article 3 goes here. It provides a brief overview of the content.",
-        image: "https://images.indianexpress.com/2020/05/sports-stars-in-lockdown.jpg", // Replace with actual image URLs
-        date: "2023-09-3",
-        region: "Europe",
-        sentiment: "Negative",
-    },
-
-    {
-        id: 1,
-        title: "Lorem Ipsum News 1",
-        source: "Lorem Ipsum Source 1",
-        summary:
-            "Summary of news article 1 goes here. It provides a brief overview of the content.",
-        image: "https://images.indianexpress.com/2020/05/sports-stars-in-lockdown.jpg", // Replace with actual image URLs
-        date: "2023-09-4",
-        region: "Europe",
-        sentiment: "Neutral",
+        Headline:
+            "finance ministry approves welfare measures for LIC agents, employees",
+        Timestamp: "PTI / Sep 18, 2023, 15:28 (IST)",
+        Description: "",
+        Link: "https://timesofindia.indiatimes.com/business/india-business/finance-ministry-approves-welfare-measures-for-lic-agents-employees/articleshow/103755427.cms",
+        content:
+            "NEW DELHI: The Finance Ministry on Monday approved a series of welfare measures, including enhancement of the gratuity limit and family pension, for the benefit of Life Insurance Corporation of India (LIC) agents and employees.The welfare measures are related to the amendments to LIC (Agents) Regulations, 2017, Enhancement of Gratuity Limit, and Uniform Rate of Family Pension, among others, the finance ministry said in a statement.Sharing the details, the statement said the ministry has enhanced the gratuity limit from Rs 3 lakh to Rs 5 lakh for LIC agents aimed at bringing substantial improvements to the working conditions and benefits for them.It has also enabled the reappointed agents to be eligible for renewal commission, thereby providing them with increased financial stability.Currently, LIC agents are not eligible for renewal commission on any business completed under the old agency.The term insurance cover for the agents has been expanded from the existing range of Rs 3,000-10,000 to Rs 25,000-1,50,000, it said, adding this enhancement in term insurance will significantly benefit the families of deceased agents, offering them a more substantial welfare benefit.With regard to LIC employees, the ministry has also approved family pension at a uniform rate of 30 per cent for the welfare of the families.More than 13 lakh agents and more than 1 lakh regular employees, who play a pivotal role in the growth of LIC and deepening of insurance penetration in India, will benefit from these welfare measures, it said.Incorporated in 1956 with an initial capital of Rs 5 crore, LIC has an asset base of Rs 45.50 lakh crore with a life fund of Rs 40.81 lakh crore as of March 31, 2023. ",
+        sentiment: "neutral",
     },
     {
-        id: 2,
-        title: "Lorem Ipsum News 2",
-        source: "Lorem Ipsum Source 2",
-        summary:
-            "Summary of news article 2 goes here. It provides a brief overview of the content.",
-        image: "https://images.indianexpress.com/2020/05/sports-stars-in-lockdown.jpg", // Replace with actual image URLs
-        date: "2023-09-5",
-        region: "Europe",
-        sentiment: "Positive",
+        Headline:
+            "Govt working on mechanism to bridge gap in crop estimates and output",
+        Timestamp: "TNN / Sep 26, 2023, 07:14 (IST)",
+        Description:
+            "The Union food secretary of India has acknowledged a mismatch in crop estimates and production, and the government is working to revamp the mechanism. The issue was flagged by the finance minister, as deficient rains could impact kharif crop production. In the past, wheat and other crop estimates have been inaccurate, resulting in the government intervening to control prices. The government aims to minimize this disparity through triangulation of data and expects results in the next one to two years.",
+        Link: "https://timesofindia.indiatimes.com/india/crop-output-estimate-system-being-revamped/articleshow/103945494.cms",
+        content:
+            "NEW DELHI: Acknowledging that there is \u00e2\u0080\u009csome bit of a mismatch\u00e2\u0080\u009d in crop estimates and production, Union food secretary Sanjeev Chopra on Monday said the government is working to revamp the mechanism and results should be visible over the next one or two years.The comment came just days after the issue was flagged by Finance Minister Nirmala Sitharaman amid concerns that deficient rains in certain parts of the country could hit production of some kharif crops. For the last two years, wheat output has been lower than what the agriculture ministry had estimated, forcing the government to stop exports last year. Besides, the farm ministry has been off the mark for other crops, such as tur too, resulting in the government stepping in late to cool down prices.The issue has also been flagged during internal government meetings, where the agriculture ministry has defended its estimates.The issue came up at a meeting of the Roller Flour Millers Federation of India on Monday, with the lobby group demanding that the government \u00e2\u0080\u009crevisit\u00e2\u0080\u009d the crop estimates put out by the agriculture ministry to provide a clear picture, well in advance.Responding to this, Chopra said, \u00e2\u0080\u009cWith regard to the production figure, I agree that there has been some bit of a mismatch, which has been reported. We are reporting 112-113 million tonnes of wheat, the trade is reporting 103 million tonnes. So, 10 million tonnes is a lot of divergence. To ensure that this kind of disparity, which is there in figures, is kept to the bare minimum, the triangulation is going to happen. You see in the next one-two years how things will change so that the figures that we are floating would become more driven by the ground level figures.\u00e2\u0080\u009dFood Corporation of India (FCI) Chairman Ashok K Meena also said the debate has been going on about what is the actual estimate of the crop production. He added that while the government appreciates different points of view, it is working hard to triangulate the data and put all data on the Unified Portal for Agricultural Statistics (UPAg) portal, which was launched recently.Last week, at an event, Sitharaman had also said that the country \u00e2\u0080\u009csuffers\u00e2\u0080\u009d for want of real time estimates of what is getting sowed and what is the likely output. \u00e2\u0080\u009c\u00e2\u0080\u00a6do we really know what will be the output of wheat this year even at the time of sowing? We can estimate the extent of land which is getting covered under wheat, but do we know what will be the output? Do we have a real time assessment and estimate of the crops?\u00e2\u0080\u009d she asked.The FM said real time data will help the government plan better instead of scrambling for supplies at the last minute. Besides, it will also be helpful to farmers, she had said.",
+        sentiment: "neutral",
     },
     {
-        id: 3,
-        title: "Lorem Ipsum News 3",
-        source: "Lorem Ipsum Source 3",
-        summary:
-            "Summary of news article 3 goes here. It provides a brief overview of the content.",
-        image: "https://images.indianexpress.com/2020/05/sports-stars-in-lockdown.jpg", // Replace with actual image URLs
-        date: "2023-09-6",
-        region: "Europe",
-        sentiment: "Negative",
+        Headline:
+            "Govt considering Rs 600 billion housing loan interest subsidy scheme: sources",
+        Timestamp: "Reuters / Sep 25, 2023, 14:32 (IST)",
+        Description:
+            "India is considering spending $7.2 billion to provide subsidised loans for small urban housing over the next five years. The scheme, announced by Prime Minister Narendra Modi in August, will offer an annual interest subsidy of 3-6.5% on housing loans below five million rupees availed for a 20-year tenure.",
+        Link: "https://timesofindia.indiatimes.com/india/govt-considering-rs-600-billion-housing-loan-interest-subsidy-scheme-sources/articleshow/103928445.cms",
+        content:
+            'NEW DELHI/MUMBAI: India is considering spending 600 billion rupees ($7.2 billion) to provide subsidised loans for small urban housing over the next five years, two government sources told Reuters. Banks are likely to roll out the scheme in a couple of months, ahead of key state elections later this year and general elections due in mid-2024. Last month, the South Asian country cut cooking gas prices for households by about 18% to rein in inflation ahead of elections.Prime Minister Narendra Modi announced the plan in a speech in August to mark the country\'s Independence Day, but its details have not been previously reported. The scheme will offer an annual interest subsidy of between 3-6.5% on up to 0.9 million rupees of the loan amount. Housing loans below five million rupees availed for a tenure of 20 years will be eligible for the proposed scheme, the sources said. "The interest subvention will be credited upfront to the housing loan account of beneficiaries. The scheme proposed till 2028 is close to finalisation and will require approval of federal Cabinet," one government official said. The scheme could benefit 2.5 million loan applicants in low-income groups in urban areas but the quantum of subsidised credit will depend on demand for such homes, the official said. "We are coming up with a new scheme in the coming years that will benefit those families that live in cities but are living in rented houses, or slums, or chawls and unauthorised colonies," Modi had said in his August speech. The officials did not want to be named as the scheme is under finalisation. Mails sent by Reuters seeking a response from the Ministry of Housing and Urban Development and the Ministry of Finance remained unanswered. Lenders have not been provided any specific lending targets but a meeting with government officials is likely soon, two bank officials said. Ahead of that, banks have started to identify beneficiaries, they said, adding that the move could help increase lending in the affordable housing segment within the home loan portfolio. This is not the first time the government has offered interest subsidies to lower-income borrowers in urban areas. A similar scheme ran between 2017-2022 with 12.27 million homes sanctioned under it. ($1 = 83.1360 Indian rupees)',
+        sentiment: "neutral",
     },
     {
-        id: 1,
-        title: "Lorem Ipsum News 1",
-        source: "Lorem Ipsum Source 1",
-        summary:
-            "Summary of news article 1 goes here. It provides a brief overview of the content.",
-        image: "https://images.indianexpress.com/2020/05/sports-stars-in-lockdown.jpg", // Replace with actual image URLs
-        date: "2023-09-7",
-        region: "Europe",
-        sentiment: "Neutral",
+        Headline: "finance ministry starts Budget work for 2024-25",
+        Timestamp: "Agencies / Sep 05, 2023, 05:59 (IST)",
+        Description: "",
+        Link: "https://timesofindia.indiatimes.com/business/india-business/finance-ministry-starts-budget-work-for-2024-25/articleshow/103372032.cms",
+        content:
+            'NEW DELHI: The finance ministry has initiated the process to prepare the interim Budget for 2024-25 by inviting inputs on expenditure from different ministries and departments. It will be an interim Budget as the Lok Sabha elections are due early next year. The full Budget for FY25 will be presented after the formation of the new government."Pre-budget meetings chaired by secretary (expenditure) shall commence in the second week of October 2023... shall continue till around mid-November," according to the Budget circular (2024-25) of the Budget division under the department of economic affairs of the finance ministry. According to the circular dated September 1, financial advisers should ensure that the necessary details required are submitted by October 5, 2023. The Budget Estimates will be provisionally finalised after completion of pre-Budget meetings, it said. In the pre-budget meetings, the requirement of funds for all categories of expenditures, along with receipts of ministries or departments, is discussed. agencies',
+        sentiment: "neutral",
     },
     {
-        id: 2,
-        title: "Lorem Ipsum News 2",
-        source: "Lorem Ipsum Source 2",
-        summary:
-            "Summary of news article 2 goes here. It provides a brief overview of the content.",
-        image: "https://images.indianexpress.com/2020/05/sports-stars-in-lockdown.jpg", // Replace with actual image URLs
-        date: "2023-09-8",
-        region: "Europe",
-        sentiment: "Positive",
+        Headline:
+            "'No distress', people investing in other financial products: finance ministry on dip in household savings",
+        Timestamp: "PTI / Sep 21, 2023, 14:25 (IST)",
+        Description: "",
+        Link: "https://timesofindia.indiatimes.com/business/india-business/no-distress-people-investing-in-other-financial-products-finance-ministry-on-dip-in-household-savings/articleshow/103833965.cms",
+        content:
+            'NEW DELHI: The finance ministry on Thursday dismissed the criticism over the impact of declining household savings on the economy, saying people are investing in different financial products and "there is no distress".The statement posted on X by the ministry brushed aside critical voices raised with regard to the decadal fall in household savings and its overall effect on the economy."Lately, critical voices have been raised w.r.t. to household savings and its overall effect on the economy. However, data indicates that changing consumer preference for different financial products is the real reason for the household savings and there is no distress as is being circulated in some circles," it said.Net household savings declined to a 47-year low of 5.1 per cent of gross domestic product in FY23 as compared to 7.2 per cent recorded in the previous year, as per the data released by the Reserve Bank in its latest monthly bulletin.At the same time, annual financial liabilities of households rose sharply by 5.8 per cent of GDP compared with 3.8 per cent in 2021-22.Defending the position, the finance ministry said, the Stock of Household Gross Financial Assets went up by 37.6 per cent, and the Stock of Household Gross Financial Liabilities went up by 42.6 per cent between June 2020 and March 2023, no big difference between the two."Households added Net Financial Assets of 22.8 lakh crore in FY21, nearly 17 lakh crore in FY22 and 13.8 lakh crore in FY23. So, they added less financial assets to their portfolio than in the previous year and the year before, but it is important to note that their overall net financial assets are still growing," it said.They added financial assets by a lesser magnitude than in the previous years because they have now started taking loans to buy real assets such as homes, it said."RBI data on personal loans provides us with evidence. Personal loans given by banks have several components. Key among them are real estate loans and vehicle loans. Both are collateralised. These two constitute 62 per cent of the overall personal loans by the banking sector. The other big categories are other personal loans and credit card loans," it said.Pointing out that there has been a steady double-digit growth in loans for housing since May 2021, it said, "so, financial liabilities have been incurred to buy real assets. Vehicle loans have been growing at double digits (y/y) since April 2022 and more than 20% (y/y) since September 2022. The household sector is not in distress, clearly. They are buying vehicles and homes on mortgages."Overall household savings (current prices) - which include , physical and jewellery - has grown at a Compound Annual Growth Rate (CAGR) of 9.2 per cent between 2013-14 and 2021-22 (8 years) and the nominal GDP has grown at a CAGR of 9.65 per cent during the same period, it said.It further said, households added net financial assets of Rs 13.8 lakh crore in FY23 compared to nearly Rs 17 lakh crore the year before and Rs 22.8 lakh crore in FY21.The biggest item that seems to have swung it is the net flow of credit from Non-Banking Financial Corporations (NBFC) to the Household Sector, which includes unincorporated enterprises, it said.NBFC had lent nearly Rs 2,40,000 crore in FY23 as compared to Rs 21,400 crore in the previous year to the household sector, it said, adding, that is a whopping 11.2 times and that has set off alarm bells as commentators forgot that these are \'flow\' numbers.Overall, NBFC retail loans outstanding were Rs 8.12 lakh crore in FY22, and it went up to Rs 10.5 lakh crore in FY23, a growth of \'only\' 29.6 per cent, it said."The two big components in NBFC retail loans are vehicle loans and \'other retail loans\'. Vehicle loan outstanding increased by about 12.5 per cent, from Rs 3.4 lakh crore in FY22 to Rs 3.82 lakh crore in FY23. Other retail loans went up from Rs 3.95 lakh crore to Rs 5.22 lakh crore. These are microfinance loans, loans to Self-Help Groups, Advances to individuals against gold and other loans," it said.So, it said, 36 per cent of NBFC\'s outstanding retail loans are for the purchase of vehicles and that is not a sign of distress on the part of households but of confidence in their future employment and income prospects.That has been amply brought out in the recent Consumer Confidence Survey of RBI, and the C-Voter Survey of Consumer Optimism conducted in July and August, respectively, it said.',
+        sentiment: "neutral",
     },
     {
-        id: 1,
-        title: "Lorem Ipsum News 1",
-        source: "Lorem Ipsum Source 1",
-        summary:
-            "Summary of news article 1 goes here. It provides a brief overview of the content.",
-        image: "https://images.indianexpress.com/2020/05/sports-stars-in-lockdown.jpg", // Replace with actual image URLs
-        date: "2023-09-9",
-        region: "Europe",
-        sentiment: "Neutral",
+        Headline:
+            "Govt hikes windfall tax on domestic crude, reduces levy on export of diesel",
+        Timestamp: "ANI / Sep 16, 2023, 11:31 (IST)",
+        Description:
+            "As per the Gazette of India, the Ministry of Finance, Department of Revenue, issued two notifications, amending previous taxation rates. According to the notifications, the windfall tax on domestic crude oil production has been increased significantly, while levies on the export of aviation turbine fuel (ATF) and diesel have been reduced.",
+        Link: "https://timesofindia.indiatimes.com/india/govt-hikes-windfall-tax-on-domestic-crude-reduces-levy-on-export-of-diesel/articleshow/103708528.cms",
+        content:
+            "NEW DELHI: In a bid to maintain equilibrium in the domestic and international fuel markets, the Central Government announced changes in the taxation structure for crude oil and petroleum product exports, effective from today.As per the Gazette of India, the Ministry of Finance, Department of Revenue, issued two notifications, amending previous taxation rates. According to the notifications, the windfall tax on domestic crude oil production has been increased significantly, while levies on the export of aviation turbine fuel (ATF) and diesel have been reduced.A tax levied on an unforeseen or unexpectedly large profit is called windfall tax.The windfall tax on domestic crude oil production has been raised from Rs 6,700 per ton to Rs 10,000 per ton. This move aims to capture a larger portion of profits from the surging crude oil prices, providing additional revenue for the government.The windfall tax on the export of aviation turbine fuel (ATF) has been decreased from Rs 4 per liter to Rs 3.50 per liter. This reduction is expected to make Indian ATF exports more competitive in the international market.The tax on the export of diesel has been reduced from Rs 6 per liter to Rs 5.50 per liter. This adjustment is aimed at boosting the export of diesel, potentially increasing revenue from international sales.These changes come as India navigates the complexities of fluctuating global oil prices and aims to strike a balance between reaping benefits from high crude oil prices and ensuring competitiveness in the international fuel market.The notifications, No. 30/2023-Central Excise and No. 31/2023-Central Excise, issued by the Ministry of Finance, will come into effect on September 16, 2023.The government expects these tax adjustments to have a positive impact on the nation's fiscal health and its position in the global fuel market.These amendments follow a series of recent changes in the taxation structure for petroleum products and are part of the government's efforts to adapt to the evolving economic landscape and maintain stability in the energy sector.",
+        sentiment: "neutral",
     },
     {
-        id: 2,
-        title: "Lorem Ipsum News 2",
-        source: "Lorem Ipsum Source 2",
-        summary:
-            "Summary of news article 2 goes here. It provides a brief overview of the content.",
-        image: "https://images.indianexpress.com/2020/05/sports-stars-in-lockdown.jpg", // Replace with actual image URLs
-        date: "2023-09-10",
-        region: "Europe",
-        sentiment: "Positive",
+        Headline:
+            "Govt dismisses criticism regarding inflated GDP, says it follows established practice to compute growth",
+        Timestamp: "PTI / Sep 15, 2023, 23:40 (IST)",
+        Description:
+            "finance ministry has dismissed criticism of inflated GDP figures, stating that it followed consistent practices and that international agencies have revised their forecasts upwards after seeing first-quarter data. The ministry argued that critics should consider other indicators such as purchasing managers' indices, bank credit growth, and consumption patterns to assess economic growth.",
+        Link: "https://timesofindia.indiatimes.com/business/india-business/govt-dismisses-criticism-regarding-inflated-gdp-says-it-follows-established-practice-to-compute-growth/articleshow/103699262.cms",
+        content:
+            'NEW DELHI: The finance ministry on Friday dismissed the criticism of inflated GDP saying it has followed the consistent practice of using the income side estimates to compute economic growth, and stressed many international agencies have revised upwards their forecast after seeing the first quarter data.The critics, the ministry said, should have looked at other data like purchasing managers\' indices, bank credit growth, increase in capital expenditure and consumption pattern to assess the growth.India\'s real GDP growth was 7.8 per cent on year-on-year (y/y) basis in Q1 FY24 as per the Income or Production Approach."As per the expenditure approach, it would have been lower. So, a balancing figure \u00e2\u0080\u0093 statistical discrepancy \u00e2\u0080\u0093 is added to the expenditure approach estimate. These discrepancies are both positive and negative. Over time, they wash out," the ministry said in a long post on X.In fact, in FY23 and FY22, the "statistical discrepancy" was negative and in other words, growth as per the Income Approach was lower, the ministry said, adding it would have been higher than the 7.2 per cent reported for FY23 and higher than the 9.1 per cent reported for FY22, using the expenditure approach.Former Chief Economic Advisor Arvind Subramanian, in an article, argued that India\'s GDP is not measured from the expenditure side rather than productivity side.Even the principal opposition party Congress earlier in the day alleged that the real GDP numbers may be inflated as they do not accurately reflect the impact of inflation on GDP growth.The ministry said India consistently uses the income side approach for calculating GDP growth for various reasons. It does not switch between the two approaches depending on which one is favourable."As for nominal GDP growth being lower than real GDP growth, this is a new bogey being spread to discredit the GDP numbers and indicate that underlying economic activity is quite weak. Both do not stand up to scrutiny," the post said.Observing that India\'s GDP deflator is dominated by the Wholesale Price Index (WPI), the ministry post said WPI peaked in the first quarter of 2022-23 due to the oil and food price increases in the wake of the war in Ukraine and supply-side disruptions."Prices began to come down from August 2022 onwards. Hence, WPI is now contracting y/y. It will soon pass once the statistical base effect disappears," it said.If inflation was higher, critics would argue that nominal GDP growth is much higher because of inflation and that there was little underlying activity, it said, adding the Ministry of Statistics and Programme Implementation (MoSPI) calculates quarterly Gross Value Added (GVA) in real terms first, and then, using the deflator, nominal values are obtained.No wonder nominal growth rates have slowed, with WPI contracting in recent months and this will normalise in the coming months, it said.So, it said, arguing that nominal GDP growth is more reliable because India has issues with its calculation of GDP deflator is to invent an argument where none exists.This is just to justify the liking for nominal GDP growth because it has been moderating in recent quarters after the high growth in the first fiscal quarter of FY23, it said.In other words, it said, critics want to latch on to anything that does not paint the Indian economy in a good light.Ideally, it said, critics would have done well to look at several other growth indicators to see if other data match their conclusions.Purchasing Managers\' Indices indicate that the manufacturing and services sectors are growing. Bank credit growth is in double digits. Consumption is improving, and the government has vigorously ramped up capital expenditure."If anything, India\'s growth numbers might understate the reality because manufacturing growth indicated by the Index of Industrial Production is far lower than what manufacturing companies are reporting," it said.Last month, India recorded GDP growth of 7.8 per cent during the April-June period of 2023-24, the highest in the past four quarters, on the back of double-digit expansion in the services sector, retaining its position as the world\'s fastest-growing major economy.The finance ministry said many international agencies have revised up their growth forecast for FY24 after the first quarter data for FY24 was released. They would not have done so if the underlying economic activity was weak, it said.The reaction from the ministry came hours after Congress general secretary Jairam Ramesh said investment and exports have also slowed dramatically, which reinforces the lived reality of the vast majority of Indians - "that all is not well".Ramesh shared the opinion piece by Subramanian on the current economic scenario.In a post on X, Ramesh said, "When headline management takes precedence over serious policy making, the government starts to believe its own tall stories of exuberant growth." The reality is far more sobering as reasoned out clinically by the Modi government\'s former chief economic advisor, he said."The real GDP numbers may after all be inflated as it does not accurately reflect the impact of inflation on GDP growth," the Congress general secretary said.Earlier this month, Chief Economic Advisor V Anantha Nageswaran had rejected criticism of "statistical discrepancy" in the first quarter GDP data, saying when the same statistical authority reported the severest contraction in the first quarter of 2020, the naysayers had called it credible as it suited their narrative."In Q1 of 2023-24, the discrepancy of 2.8 per cent has a plus sign. This indicates that the expenditure side has explained only 97.2 per cent of the income side. It does not mean that the 2.8 per cent that has yet to be explained does not exist,\u00e2\u0080\u009d Nageswaran said in an op-ed article."It exists and lends itself to being explained in subsequent quarters. Similarly, the preceding eight quarters have shown negative discrepancies. It means that the expenditure side has been over-explained and needs to be reconciled," the article co-authored by senior government economist Rajiv Mishra read.The article was written in light of debates over India\'s economic performance and economist Ashoka Mody, a Princeton University professor, raising concerns regarding the country\'s GDP growth rate for the first quarter of the financial year 2023-24."Indian authorities are downplaying inconvenient macroeconomic facts so that they can celebrate seemingly flattering headline figures ahead of hosting the G20 summit. But, in covering up the growing struggles faced by the vast majority of Indians, they are playing a cynical and dangerous game," Mody said in an article posted by Project Syndicate titled "India\'s Fake Growth Story".Mody has contended that the National Statistical Office (NSO) is utilising selective data, which, when examined more comprehensively, yields a significantly lower GDP growth rate than the 7.8 per cent announced by the government last month. ',
+        sentiment: "neutral",
     },
     {
-        id: 1,
-        title: "Lorem Ipsum News 1",
-        source: "Lorem Ipsum Source 1",
-        summary:
-            "Summary of news article 1 goes here. It provides a brief overview of the content.",
-        image: "https://images.indianexpress.com/2020/05/sports-stars-in-lockdown.jpg", // Replace with actual image URLs
-        date: "2023-09-11",
-        region: "Europe",
-        sentiment: "Neutral",
+        Headline:
+            "Ahead of festive season, Nepal to import 20,000 MT sugar from India",
+        Timestamp: "PTI / Sep 14, 2023, 15:08 (IST)",
+        Description:
+            "head of the festive season, Nepal is set to import 20,000 metric tonnes (MT) of sugar from India, which meets at least 70 per cent of the Himalayan country's domestic annual demand of approximately 3,00,000 MT.",
+        Link: "https://timesofindia.indiatimes.com/world/south-asia/ahead-of-festive-season-nepal-to-import-20000-mt-sugar-from-india/articleshow/103660003.cms",
+        content:
+            "KATHMANDU: Ahead of the festive season, Nepal is set to import 20,000 metric tonnes (MT) of sugar from India, which meets at least 70 per cent of the Himalayan country's domestic annual demand of approximately 3,00,000 MT.In view of the upcoming festivals, including Vijaya Dashami and Deepawali, the Ministry of Industry, Commerce and Supplies has asked the Finance Ministry to give customs waiver for importing 60,000 MT of sugar to meet the local demand. The Finance Ministry has, however, given permission to import only 20,000 MT for the time being.According to Finance Ministry spokesperson, Dhaniram Sharma, the Ministry has given 50 per cent discount on customs duty, which means 15 per cent less from the earlier imposed 30 per cent customs duty.Two companies, Salt Trading Corporation (STC) and Food Management and Trading Company, both would import 10,000 MT sugar each for the upcoming festival season, according to Sharma. However, divisional manager of STC Brajesh Jha said that it had asked the government permission to import 50,000 MT of sugar.According to Jha, Nepal's domestic demand for sugar stands at 3,00,000 MT and it needs to import a huge quantity of sugar mainly from India. There are 12 sugar factories in Nepal that produce around 1,00,000 MT of sugar.According to an estimate, Nepal imports at least 70 per cent sugar from India. Besides, thousands of tons of sugars are brought through illegal channel without paying customs duty.Sugar is available in the black market in Kathmandu and the prices ranges from Nepali Rupees 100 to 125 per kg, where as it costs around Rs 40 - 50 in India. ",
+        sentiment: "neutral",
     },
     {
-        id: 2,
-        title: "Lorem Ipsum News 2",
-        source: "Lorem Ipsum Source 2",
-        summary:
-            "Summary of news article 2 goes here. It provides a brief overview of the content.",
-        image: "https://images.indianexpress.com/2020/05/sports-stars-in-lockdown.jpg", // Replace with actual image URLs
-        date: "2023-09-12",
-        region: "Europe",
-        sentiment: "Positive",
+        Headline:
+            "Jodhpur\u2019s riverfront project hanging in limbo since 2013",
+        Timestamp: "Sep 14, 2023, 08:26 (IST)",
+        Description: "",
+        Link: "https://timesofindia.indiatimes.com/city/jodhpur/jodhpurs-riverfront-project-hanging-in-limbo-since-2013/articleshow/103649314.cms",
+        content:
+            "Jodhpur: While residents of Kota celebrated when the Chambal riverfront was inaugurated in Kota on Tuesday, people of Jodhpur felt disappointed at the fate of a similar project in their city.The plan for \u00e2\u0080\u0098Jojari River Front\u00e2\u0080\u0099 was prepared by the then mayor of Jodhpur municipal corporation, Rameshwar Dadhich, in 2013, inspired by the Sabaramati River Front in Ahmedabad. It was proposed during the previous Gehlot-led government, but first found mention in CM Gehlot\u00e2\u0080\u0099s first budget speech in his current tenure. However, it has been awaiting the release of funds since then.In March this year, the project was taken up by the Centre\u00e2\u0080\u0099s Jal Shakti ministry. Jal Shakti minister Gajendra Singh Shekhawat said that the 15th Finance Commission had approved the project and sanctioned a budget of Rs 400 crore for it. Shekhawat said a team from IIT Delhi visited Jodhpur to do a survey but did not receive support from the state government, which has again stalled the project. Dadhich says that the project would have contributed significantly to addressing the problem of contaminated water discharge from sewerage and industries into the Jojari river.\u00e2\u0080\u009cWe prepared a DPR (detailed project report) at an estimated cost of Rs 125 crore in 2013. But then the government changed and the project did not progress,\u00e2\u0080\u009d Dadhich said while talking to ToI.He said he took up the project also with the BJP government headed by Vadsundhara Raje, but it took almost her entire stint to convince her to sanction a budget of Rs 124 crore, barely a few months before the assembly election.With the return of the Gehlot government in 2018, the project found mention in the 2019-20 budget and the Jodhpur Development Authority (JDA) worked on a fresh DPR, estimating the project cost to be Rs 460 crore. Lack of funds again stalled the project. A JDA official said that they have not been given any funds for this project since the DPR was made. ",
+        sentiment: "negative",
+    },
+    {
+        Headline:
+            "Sri Lanka announces $10 bln local bond swap deal ahead of IMF visit",
+        Timestamp: "Reuters / Sep 12, 2023, 14:44 (IST)",
+        Description:
+            "Sri Lanka has accepted offers to exchange $10 billion worth of defaulted local debt for new bonds, as part of its debt restructuring requirements. The exchange, which includes 3.2 trillion rupees of eligible bonds, will help reduce the country's Gross Financing Needs over the next 10 years. The success of the exchange will also contribute to achieving Sri Lanka's debt reduction targets set under the IMF program.",
+        Link: "https://timesofindia.indiatimes.com/world/south-asia/sri-lanka-announces-10-bln-local-bond-swap-deal-ahead-of-imf-visit/articleshow/103603432.cms",
+        content:
+            'COLOMBO: Sri Lanka has accepted offers to exchange about $10 billion worth of defaulted local debt for new bonds, the Finance Ministry said on Tuesday, taking it a step towards meeting debt restructuring requirements ahead of an International Monetary Fund (IMF) review.Sri Lanka has been battling its worst financial crisis in more than seven decades after its foreign exchange reserves depleted to record lows and forced the island to default on its debts in May 2022.The bonds, largely from superannuated funds, were eligible for exchange under a domestic debt restructuring program announced by Sri Lanka in June.A total of 3.2 trillion rupees of the 8.7 trillion rupees in bonds eligible for exchange were accepted, the Finance Ministry said in a statement. The settlement date of the exchange has been set at Sept. 14."The success of the Invitation to Exchange will enable the Republic to reduce Gross Financing Needs (GFN) over the next 10 years, thereby contributing to achieving the Republic\'s GFN target agreed in the context of the current IMF-supported programme," the statement added.A delegation from the IMF will arrive in Colombo on Thursday to start the evaluation process for the first review of the $2.6 billion four-year program which Sri Lanka secured in March.Under the IMF program, Sri Lanka has set a target of restructuring its debt for the next 10 years and reducing its debt-to-GDP ratio from the current 120% to about 95% by 2032.However, Sri Lanka still neds to complete talks with key bilateral creditors, including Japan, China and India, before it can take the next step to restructure its debt.',
+        sentiment: "neutral",
+    },
+    {
+        Headline:
+            "India imposes anti-dumping duty on Chinese steel for 5 years",
+        Timestamp: "ANI / Sep 12, 2023, 10:15 (IST)",
+        Description:
+            "India has imposed an anti-dumping duty on some Chinese steel for a period of another five years, according to an official gazette by the Ministry of Finance. An anti-dumping duty of USD 613 per tonne has been imposed on flat-base steel wheels from China, according to a notification on Monday. Such duty on steel wheels was imposed in 2018 and now the ministry has recommended a continued imposition for another five years.",
+        Link: "https://timesofindia.indiatimes.com/india/india-imposes-anti-dumping-duty-on-chinese-steel-for-5-years/articleshow/103595163.cms",
+        content:
+            'NEW DELHI: India has imposed an anti-dumping duty on some Chinese steel for a period of another five years, according to an official gazette by the Ministry of Finance.An anti-dumping duty of USD 613 per tonne has been imposed on flat-base steel wheels from China, according to a notification on Monday. Such duty on steel wheels was imposed in 2018 and now the ministry has recommended a continued imposition for another five years."The Indian industry does not gain any undue advantage on the extension of existing duties," it said."The evidence of export price indicates that the Chinese exporters are exporting the goods to third countries at significant dumped and injurious prices," the notification said, explaining the rationale behind the move.The notification added there is healthy competition in the Indian market and continuation of the duties would not deprive the domestic industry of any requirements.Simply put, anti-dumping duties are taxes imposed on imported goods in order to compensate for the difference between their export price and their normal value, if dumping causes injury to producers of competing products in the importing country.',
+        sentiment: "neutral",
+    },
+    {
+        Headline: "With 7% hike in August, city rides high on GST growth",
+        Timestamp: "TNN / Sep 02, 2023, 08:34 (IST)",
+        Description: "",
+        Link: "https://timesofindia.indiatimes.com/city/chandigarh/with-7-hike-in-august-city-rides-high-on-gst-growth/articleshow/103299249.cms",
+        content:
+            "Chandigarh: Chandigarh has registered 7% increase in the GST collection in August 2023 as compared to the corresponding period last year. As per the GST collection figures released by the ministry of finance on Friday, the UT excise and taxation department in August 2022 had collected Rs 179 crore in GST revenue, which jumped to Rs 192 crore in August this year.103299248 Notably, the year-on-year increase in GST revenue was 23% in July 2023 in comparison to July 2022. UT had collected Rs 176 crore in GST revenue. This jumped to Rs 217 crore in July this year.In June 2022, the UT excise and taxation department had collected Rs 169.7 crore in GST revenue. This jumped to RS 227.06 crore in June this year.The highest ever percentage increase in the GST collection year-on-year was recorded in May where it registered a 55% increase. In May last year, the GST collections were Rs 167 crore, which increased to Rs 259 crore in May 2023.The GST collections increased by 2% in April 2023 over the same period in 2022. In April this year, the UT collected Rs 255 crore, while in April 2022, the collection stood at Rs 249 crore.The GST collections had increased by 10% in March 2023 over the March 2022 collections. The city in March 2023, registered a collection of Rs 202 crore, while for the same period last year, the collection was Rs 184 crore.The MoF releases state-wise growth of GST revenues on a monthly basis.In February 2023, there was a growth of 5% in GST collections. While in February 2022, collections stood at Rs 178 crore, for February 2023, it was Rs 188 crore. January figures were not released for Chandigarh.The GST collection in December 2022 registered a growth of 33% against the collections during the corresponding period in 2021. The collection for December 2022 stood at Rs 218 crore, which was Rs 54 crore more than Rs 164 crore collected during the same month in 2021.In the 3rd quarter of the year 2022-23, the UT witnessed 18.77% growth in the GST collection. It stood at Rs 595.65 crore, which was Rs 94.13 crore more than the revenue of Rs 501.52 crore generated during the 3rd quarter of last year.In the 2nd quarter, the UT registered a 20.55% increase in collection, it stood at Rs.561.04 crores which was Rs 95.63 crore more than revenue of Rs 465.41 crores generated during the same quarter a year before. A growth of 29.04% was witnessed in the 1st quarter of the year 2022-23 with a collection of Rs 585.45 crore, up from Rs 453.69 crore collected during the same quarter last year.",
+        sentiment: "neutral",
+    },
+    {
+        Headline:
+            "Power Finance Corporation CMD Parminder Chopra gets 'Finance Leader of the Year' award",
+        Timestamp: "PTI / Aug 09, 2023, 10:35 (IST)",
+        Description: "",
+        Link: "https://timesofindia.indiatimes.com/business/india-business/power-finance-corporation-cmd-parminder-chopra-gets-finance-leader-of-the-year-award/articleshow/102559473.cms",
+        content:
+            "NEW DELHI: Power Finance Corporation (PFC) CMD Parminder Chopra has received a recognition for her role in finance sector, an official statement said on Tuesday.PFC, under the Ministry of Power, is the largest non-banking financial company (NBFC).\"The 'Finance Leader of the Year' award is for her exceptional contributions to the finance industry. Her outstanding achievements in financial management, strategic decision-making, and driving organisational growth have left an indelible mark on the world of finance,\" PFC said in a statement.Chopra is a qualified Cost Accountant and an MBA. In her over 35 years of career, she has held crucial positions in power sector. ",
+        sentiment: "positive",
+    },
+    {
+        Headline: "GST collections up 11% in August on domestic demand",
+        Timestamp: "TNN / Sep 02, 2023, 04:08 (IST)",
+        Description: "",
+        Link: "https://timesofindia.indiatimes.com/business/india-business/gst-collections-up-11-in-august-on-domestic-demand/articleshow/103296315.cms",
+        content:
+            'NEW DELHI: GST collections rose 10.8% to Rs 1,59,069 crore in August, as the mop-up suffered due to rain related disruptions in some states such as Himachal Pradesh.Himachal Pradesh - where severe rains have resulted in disruption of road and rail movement - saw a meagre 2% increase in GST collections, the lowest among all states and Union territories. Uttarakhand, the other hilly state affected by the monsoon, however, reported a 24% jump, according to latest numbers released by the finance ministry based on transactions in July. Tripura recorded the highest growth of 40%, followed by Arunachal Pradesh at 39%.Once again, domestic demand is seen to have powered the growth, although integrated GST on imports saw an increase of 3% - the first time it has gone up in three months. GST collections from domestic sources went up by 14%, the finance ministry said in a statement.103296420"The headline number is marginally lower than our forecast, dampened by imports. However, the overall collections so far this year remain robust," said Aditi Nayar, chief economist at ratings agency ICRA.Revenue secretary Sanjay Malhotra said GST collections have grown more than the nominal GDP growth rate in the April-June quarter, despite no increase in tax rates. "This is because of better compliance and improved tax collection efficiency," he said, adding that tax evasion and avoidance, too, have been low.The kitty during August remains within the government\'s target of around Rs 1.6 lakh crore a month, with the Centre expecting a pick-up during the festival season. "These GST collections, coming in the backdrop of the good GDP growth in the first quarter, herald the onset of the festive season where consumption increases occur... All the key manufacturing and consuming states have shown an increase ranging from 10% to 23%, indicating that overall increase in domestic consumption is fairly widespread across states," said M S Mani, partner at consulting firm Deloitte India.The government is banking on higher than budgeted collections to achieve its fiscal deficit target of 5.9% of GDP, factoring in higher pre-poll spending and a shortfall in disinvestment receipts.',
+        sentiment: "positive",
+    },
+    {
+        Headline:
+            "Government cuts windfall tax on domestic crude, hikes levy on export of diesel, ATF",
+        Timestamp: "PTI / Sep 01, 2023, 23:35 (IST)",
+        Description:
+            "The government on Friday cut special additional excise duty (SAED) on crude petroleum to Rs 6,700 per tonne with effect from September 2. In the last fortnightly review on August 14, windfall tax on domestically produced crude oil was set at Rs 7,100 per tonne.",
+        Link: "https://timesofindia.indiatimes.com/business/india-business/government-cuts-windfall-tax-on-domestic-crude-hikes-levy-on-export-of-diesel-atf/articleshow/103293532.cms",
+        content:
+            "NEW DELHI: The government on Friday cut special additional excise duty (SAED) on crude petroleum to Rs 6,700 per tonne with effect from September 2. In the last fortnightly review on August 14, windfall tax on domestically produced crude oil was set at Rs 7,100 per tonne. Besides, SAED or duty on export of diesel will increase to Rs 6 per litre from Rs 5.50 per litre, currently. The duty on jet fuel or ATF will be doubled to Rs 4 per litre effective Saturday, from Rs 2 per litre currently, according to a finance ministry notification. It said SAED on petrol will continue at nil. India first imposed windfall profit taxes on July 1, 2022.",
+        sentiment: "neutral",
+    },
+    {
+        Headline:
+            "Centre's priority is to tame inflation: Finance minister Nirmala Sitharaman",
+        Timestamp: "TIMESOFINDIA.COM / Aug 25, 2023, 16:11 (IST)",
+        Description:
+            'Union finance minister Nirmala Sitharaman on Friday said that taming inflation to ensure sustained economic growth is the Centre\'s "priority".She was addressing the B20 Summit India, being hosted by the Confederation of Indian Industry (CII).During her speech, the minister said that elevated interest rates for considerable time hampers recovery, adding that her "priority is to tame inflation."',
+        Link: "https://timesofindia.indiatimes.com/business/india-business/centres-priority-is-to-tame-inflation-finance-minister-nirmala-sitharaman/articleshow/103060446.cms",
+        content:
+            'NEW DELHI: Union finance minister Nirmala Sitharaman on Friday said that taming inflation to ensure sustained economic growth is the Centre\'s "priority".She was addressing the B20 Summit India, being hosted by the Confederation of Indian Industry (CII).During her speech, the minister said that elevated interest rates for considerable time hampers recovery, adding that her "priority is to tame inflation.""Obsession to use interest rates as the only tool to deal with inflation and not manage the supply side factors will not give a complete solution," Sitharaman said.Annual retail inflation in July rose to its highest in 15 months as vegetable and cereals prices skyrocketed, beating all market expectations and putting pressure on the government to take action. &lt;iframe title="Retail inflation rises sharply in July " aria-label="Interactive line chart" id="datawrapper-chart-RQZUN" src="https://toi-infographics.indiatimes.com/graphs/RQZUN/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="440" data-external="1"&gt;&lt;/iframe&gt;&lt;script type="text/javascript"&gt;!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r&lt;e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();&lt;/script&gt;The finance minister said that the GDP numbers for the first quarter, which will be released this month, "should be good".On growth, she said that India has been able to accelerate the pace of economic reforms and the first quarter GDP numbers "should be good."The National Statistical Office is scheduled to release the GDP numbers for the first quarter on August 31.Sitharaman said that "green shoots" of private capital expenditure can be felt on back of the government\'s push for capital expenditure in the budget.The minister said that India\'s free trade agreement with UK will be finalised soon and that talks are on for a similar pact with Canada in the future.She also spoke about climate financing and reforms being undertaken by the government to attract foreign investments as they are vital for economic growth. (With inputs from agencies)',
+        sentiment: "neutral",
+    },
+    {
+        Headline:
+            "Police set to freeze \u20b94.7-cr assets of big drug peddlers",
+        Timestamp: "Sep 01, 2023, 08:58 (IST)",
+        Description: "",
+        Link: "https://timesofindia.indiatimes.com/city/ludhiana/police-set-to-freeze-4-7-cr-assets-of-big-drug-peddlers/articleshow/103265051.cms",
+        content:
+            "Ludhiana: The revenue department under the Union finance ministry has given approval to proposals of Khanna police to freeze properties and assets of drug peddlers worth Rs 4.75 crore. All these properties and assets, both moveable and immoveable, were allegedly built or bought using drug money by peddlers from whom drugs were seized in large quantity.Khanna SSP Amneet Kondal said police had prepared seizing/freezing orders of properties owned by 13 persons who are either accused or their family members. She said the accused had been booked in five separate NDPS cases after police had seized poppy husk and opium from them in large quantity.Police said the freezing orders of the properties have been approved by the competent authority in the Union government (department of revenue, ministry of finance). Cops said notices to all 13 persons have already been served by the authority concerned.Cops said properties, including residential houses, agriculture land, cars and motorcycles, were amassed by the accused using drug money in the past six years and didn\u00e2\u0080\u0099t include their ancestral property.All these cases are from Samrala sub-division (three cases under Samrala police station and two Machhiwara police station). In a case of recovery of 2.6kg opium on May 3 in Samrala, police have proposed to attach properties (a triple storey house, a truck and two cars) of accused Amritpal Singh and his wife Rachhpal Kaur in Balion village worth more than Rs 1.13 crore. On August 21 last year, police had seized 400 kg of poppy husk. Now, police have proposed to attach the properties of accused in the case worth Rs 1.8 crore.",
+        sentiment: "negative",
+    },
+    {
+        Headline:
+            "Formal implementation of multi-million US Dollar MCC pact begins in Nepal",
+        Timestamp: "ANI / Aug 30, 2023, 21:57 (IST)",
+        Description:
+            "Aiming to enhance the road and transmission capacity of Nepal, the multimillion-dollar Millennium Challenge Corporation (MCC) pact has started its work formally from Wednesday.",
+        Link: "https://timesofindia.indiatimes.com/world/us/formal-implementation-of-multi-million-us-dollar-mcc-pact-begins-in-nepal/articleshow/103220348.cms",
+        content:
+            "KATHMANDU: Aiming to enhance the road and power transmission capacity of Nepal, the multimillion-dollar Millennium Challenge Corporation (MCC) pact has started its work formally from Wednesday.The five-year project which aims to improve road and electricity connectivity started its formal countdown following an agreement between the Government of Nepal and MCC after substantial progress on project preparation has been achieved.During a ceremony held at the Finance Ministry, Nepal Finance Minister Prakash Sharan Mahat and Vice President- Compact Operations at MCC, Cameron Alford, exchanged a letter on the Entry into Force (EIF) of the Nepal Compact.The EIF marks the fulfilment of necessary conditions and preparation to ensure the successful completion of Compact projects within a five-year timeline.\"I am glad that two major infrastructure component is covered with the MCC-supported project- road and transmission lines. We need decent roads because all the people need to get engaged in businesses and production activities that they can take (produces) to the market. That's why roads are important for us. At the same time, the transmission line is important for us. We have good hydropower potential and we are doing good in terms of production but to get that production to market is crucial. That is where the importance of transmission lines comes and the major composition of this project is a transmission line,\" Mahat said addressing the occasion.Nepal and MCC signed the MCC Nepal Compact on September 14, 2017, for two projects, the Electricity Transmission Project and the Road Maintenance Project, which will work to increase the reliability of electricity and lower the cost of transportation in Nepal.The program is co-funded by the US Government's Millennium Challenge Corporation (MCC) Compact grant of USD 500 million and the Government of Nepal's contribution of USD 197 million.\"We have been steadfast partners- MCC and Nepal Government, going back to the earliest days of compact development. It's really apropos that we are gathered here to turn on that five-year clock. I can say that for MCC, we are going into implementation based on that strong collaboration and preparation that we have undertaken here,\" Cameron Alford, the Vice President of Compact operations at MCC said addressing the event.The MCA- Nepal (Millennium Challenge Account-Nepal) has completed its preparatory works to reach out to the phase of former implementation of the project which has a lifespan of five years.\"This is grant based effort that focuses entirely on the improved and energized economic growth for Nepal at the time it's very critical for Nepal's economy to develop opportunities for the workforce that Nepal's young society with a brilliant future in front of it and this project is going to power that future in a powerful way,\" Dean Thompson, the US Ambassador to Nepal said.The multi-million-dollar pact was ratified by parliament on February 27, 2022 with an \"interpretative declaration\" as the public in Nepal has been driven by misinformation about the Millennium Challenge Corporation, a US Foreign Assistance Agency that aims to fight poverty, as a military pact.Despite the fact that Nepal was the first country in the region to qualify for the program and an agreement to this effect was signed in September 2017, some opposition leaders have been claiming otherwise.The US Government's MCC signed a USD 500 million compact with the Nepal government in September 2017 aimed at maintaining road quality, increasing the availability and reliability of electricity, and facilitating cross-border electricity trade between Nepal and India-helping to spur investments, accelerating economic growth, and reduce poverty.This will help support Nepal to better deliver critical services to its people, ease the movement of goods around the country, and open new opportunities for private investment-all to create sustainable development for the people of Nepal.According to MCC, strengthening the reliability of key infrastructure will put the country's economy on a firmer growth trajectory, advance stability, support regional security, and reduce poverty.An additional USD 130 million contribution from the Government of Nepal in support of the compact-the largest up-front partner country contribution in MCC's history will enable even greater impact and benefits for the Nepali people. ",
+        sentiment: "neutral",
     },
 ];
