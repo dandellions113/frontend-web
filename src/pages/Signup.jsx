@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import authAxiosInstance from "../api/authAxiosInstance";
 import { getCookie } from "../Utils/cookieUtils";
+import toast from "react-hot-toast";
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -96,10 +97,15 @@ function Signup() {
 
       // Handle success response (You can add your success handling logic here)
       console.log("Signup successful:", response.data);
+      toast.success("Registered Successfully !");
       navigate("/");
     } catch (error) {
       // Handle error response (You can add your error handling logic here)
       console.error("Signup error:", error);
+      toast.error("Something went wrong", {
+        duration: 4000,
+        position: "top-right",
+      });
     }
   };
 
