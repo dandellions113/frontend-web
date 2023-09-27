@@ -1,49 +1,64 @@
-import { Link, useNavigate } from "react-router-dom";
-import { removeCookie } from "../Utils/cookieUtils";
+import { useState } from "react";
 
-const Navbar = () => {
+import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from "react-icons/ai";
+import { removeCookie } from "../Utils/cookieUtils";
+import { Link, useNavigate } from "react-router-dom";
+
+const Header = () => {
+  let Links = [
+    { name: "News", link: "/news" },
+    { name: "Profile", link: "/profile" },
+    { name: "third link", link: "/" },
+    { name: "fourth link", link: "/" },
+  ];
+  let [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
   const Logout = () => {
     removeCookie("jwtToken");
     navigate("/");
   };
-  return (
-    <div>
-      <header className="font-semibold body-font bg-indigo-500 text-white fixed left-0 right-0 top-0 z-20">
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <span className="ml-3 text-xl text-white font-bold">FingerTip</span>
-          </a>
 
-          <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <Link to="/news" className="mr-5 hover:text-gray-300">
-              News
-            </Link>
-            <Link to="/profile" className="mr-5 hover:text-gray-300">
-              Profile
-            </Link>
-            <Link to="/" className="mr-5 hover:text-gray-300">
-              Third Link
-            </Link>
-            <Link to="/" className="mr-5 hover:text-gray-300">
-              Fourth Link
-            </Link>
-          </nav>
+  return (
+    <div className="shadow-md w-full fixed top-0 left-0 z-20">
+      <div className="md:flex items-center justify-between bg-indigo-500 text-white py-4 md:px-10 px-7 md:p-5">
+        {/* logo section */}
+        <Link
+          to="/news"
+          className="font-bold  text-2xl cursor-pointer flex items-center gap-1"
+        >
+          <span className=" font-extrabold text-white">@</span>
+          <span>FingerTip</span>
+        </Link>
+        {/* Menu icon */}
+        <div
+          onClick={() => setOpen(!open)}
+          className="absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7"
+        >
+          {open ? <AiOutlineClose /> : <GiHamburgerMenu />}
+        </div>
+        {/* linke items */}
+        <ul
+          className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-indigo-500 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in text-base ${
+            open ? "top-12" : "top-[-490px]"
+          }`}
+        >
+          {Links.map((link) => (
+            <li
+              className="md:ml-8 md:my-0 my-7 font-semibold text-white"
+              key={link.name}
+            >
+              <Link
+                to={link.link}
+                className=" hover:text-gray-100 duration-500"
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
           <button
-            className="inline-flex items-center bg-white text-indigo-500 font-bold border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+            className="inline-flex items-center bg-white text-indigo-500 font-bold border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 md:ml-8 md:my-0 my-7"
             onClick={Logout}
           >
             Logout
@@ -59,10 +74,11 @@ const Navbar = () => {
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </button>
-        </div>
-      </header>
+        </ul>
+        {/* button */}
+      </div>
     </div>
   );
 };
 
-export default Navbar;
+export default Header;

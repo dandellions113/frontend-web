@@ -1,42 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom"; // If using React Router
 import { getCookie } from "../Utils/cookieUtils";
-import Navbar from "../components/Navbar";
+import { BiSolidTimeFive } from "react-icons/bi";
+import { MdLocationOn } from "react-icons/md";
+import { FaSourcetree } from "react-icons/fa";
+import { newsData } from "../assets/newsData";
+import { GrStatusCriticalSmall } from "react-icons/gr";
 
 // Dummy data for a news article
-const articleData = {
-  title: "How to design a website (step-by-step guide)",
-  source: "Lorem Ipsum Source 1",
-  summary:
-    "Summary of news article 1 goes here. It provides a brief overview of the content.",
-  image:
-    "https://images.indianexpress.com/2020/05/sports-stars-in-lockdown.jpg", // Replace with an actual image URL
-  date: "2023-09-23",
-  region: "Europe",
-  sentiment: "Negative",
-  content: `
-    <p>
-      This is the full content of the news article. It contains detailed information and paragraphs
-      about the topic. You can add as much text as needed here.
-      This is the full content of the news article. It contains detailed information and paragraphs
-      about the topic. You can add as much text as needed here. This is the full content of the news article. It contains detailed information and paragraphs
-      about the topic. You can add as much text as needed here. This is the full content of the news article. It contains detailed information and paragraphs
-      about the topic. You can add as much text as needed here. This is the full content of the news article. It contains detailed information and paragraphs
-      about the topic. You can add as much text as needed here.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod tincidunt nisl,
-      a volutpat urna congue id. Fusce in augue sed leo viverra tempor. Morbi eu purus erat.
-      This is the full content of the news article. It contains detailed information and paragraphs
-      about the topic. You can add as much text as needed here. This is the full content of the news article. It contains detailed information and paragraphs
-      about the topic. You can add as much text as needed here. This is the full content of the news article. It contains detailed information and paragraphs
-      about the topic. You can add as much text as needed here. This is the full content of the news article. It contains detailed information and paragraphs
-      about the topic. You can add as much text as needed here. This is the full content of the news article. It contains detailed information and paragraphs
-      about the topic. You can add as much text as needed here.
-    </p>
-    <!-- Add more content here -->
-  `,
-};
+const articleData = newsData[0];
 
 function ArticlePage() {
   const navigate = useNavigate();
@@ -50,43 +22,58 @@ function ArticlePage() {
   }, []);
   return (
     <div className="bg-gray-100 min-h-screen p-4">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="sm:text-5xl text-4xl font-bold  my-8">
-          {articleData.title}
+      <div className="max-w-4xl mx-auto ">
+        <h1 className="sm:text-5xl text-4xl sm:text-center font-bold  my-8 text-indigo-500">
+          {articleData.Headline}
         </h1>
-        <div className="bg-white rounded shadow-md p-4">
+        <div className="bg-white  shadow-md text-indigo-500 p-12 rounded-md">
           <img
-            src={articleData.image}
-            alt={`Image for ${articleData.title}`}
-            className="w-full h-auto mb-4"
+            src={articleData.Img}
+            alt={`Image for ${articleData.Headline}`}
+            className="w-full h-auto mb-4 rounded-xl"
           />
-          <p className="text-gray-600 mb-2">{articleData.source}</p>
-          <div className="mb-2">
-            <div className={`font-semibold `}>
-              Date:<span className="font-bold"> {articleData.date} </span>
+          <div className="flex items-center justify-center ">
+            <p className=" mb-4 font-semibold  flex items-center  mr-4">
+              <FaSourcetree className="mr-2 " />{" "}
+              <span>{articleData.Timestamp}</span>
+            </p>
+            <p className="mb-4 font-semibold  flex items-center mr-4">
+              <BiSolidTimeFive className="mr-2 " />{" "}
+              <span className="font-bold"> {articleData.Timestamp} </span>
+            </p>
+            <p className="mb-4 font-semibold  flex items-center mr-4">
+              <MdLocationOn className="mr-2 " />{" "}
+              <span className="font-bold"> {"Europe"}</span>
+            </p>
+
+            <div className="mb-4 flex justify-center items-center">
+              <GrStatusCriticalSmall className="mr-2" />
+              <span
+                className={`font-semibold ${
+                  articleData.sentiment === "Negative" &&
+                  "text-red-500  bg-white rounded-full font-bold "
+                }
+              ${
+                articleData.sentiment === "Positive" &&
+                "text-green-500   bg-white rounded-full font-bold  "
+              }
+
+              ${
+                articleData.sentiment === "neutral" &&
+                "text-indigo-500   bg-white rounded-full font-bold  "
+              }
+              
+              `}
+              >
+                {articleData.sentiment}
+              </span>
             </div>
           </div>
-          <div className="mb-2">
-            <div className={`font-semibold`}>
-              Region: <span className="font-bold"> {articleData.region}</span>
-            </div>
-          </div>
-          <div className="my-6">
-            <span
-              className={`font-semibold ${
-                articleData.sentiment === "Negative"
-                  ? "bg-red-500 text-white rounded-full font-bold px-3 py-2"
-                  : ""
-              }`}
-            >
-              feed back: {articleData.sentiment}
-            </span>
-          </div>
+
           {/* Article content */}
-          <div
-            dangerouslySetInnerHTML={{ __html: articleData.content }}
-            className="text-gray-800"
-          ></div>
+          <div className="text-gray-800 sm:text-lg text-sm">
+            {articleData.content}
+          </div>
         </div>
         <div className="text-center mt-4">
           {/* Optional: Add a back button to return to the news summary page */}

@@ -5,9 +5,10 @@ import NewsSummary from "./pages/NewsSummary";
 import ArticlePage from "./pages/ArticlePage";
 import UserProfile from "./pages/UserProfile";
 import { Toaster } from "react-hot-toast";
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import { useEffect, useState } from "react";
 import { getCookie } from "./Utils/cookieUtils";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -23,7 +24,7 @@ function App() {
   }, [location]);
 
   return (
-    <div className={`${isLoggedIn && "mt-24"}`}>
+    <div className={`${isLoggedIn && "mt-20"}`}>
       <Toaster />
 
       <div>
