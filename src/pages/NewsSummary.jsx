@@ -162,7 +162,7 @@ function NewsSummary() {
     const jwtToken = getCookie("jwtToken");
     if (!jwtToken) {
       // Redirect to the desired page
-      navigate("/login");
+      navigate("/");
     }
   }, []);
 
