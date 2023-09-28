@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import axiosInstance from "../api/axiosInstance";
 import { AiFillDelete } from "react-icons/ai";
 import toast from "react-hot-toast";
+import { confirm } from "../components/Confirm";
 
 export default function SavedNewsItem({ news, onDelete }) {
   const [isDeleting, setIsDeleting] = useState(false);
@@ -21,7 +22,9 @@ export default function SavedNewsItem({ news, onDelete }) {
   };
 
   const handleDelete = async () => {
-    const confirmDelete = window.confirm("Are you sure you want to delete?");
+    const confirmDelete = await confirm(
+      "Are you sure you want to delete the article ?"
+    );
     try {
       if (!confirmDelete) {
         return;

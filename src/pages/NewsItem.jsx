@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import { BsBookmarkFill } from "react-icons/bs";
 import axiosInstance from "../api/axiosInstance";
 import toast from "react-hot-toast";
+import { AiFillDelete } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 export default function NewsItem({ news }) {
   // Define state to track whether the news article is saved or not
@@ -27,6 +29,7 @@ export default function NewsItem({ news }) {
   };
 
   const handleSaveArticle = async (article) => {
+    console.log(article, "article");
     try {
       const res = await axiosInstance.post("/articles", article);
 
@@ -83,9 +86,12 @@ export default function NewsItem({ news }) {
         <p className="text-sm text-gray-500">
           {news.Description.length > 0 &&
             news.Description.split(" ").slice(0, 40).join(" ")}{" "}
-          <span className="text-blue-500 hover:text-blue-700">
+          <Link
+            to={`/article/${news.Headline}`}
+            className="text-blue-500 hover:text-blue-700"
+          >
             Continue reading...
-          </span>
+          </Link>
         </p>
       </div>
 
@@ -110,13 +116,15 @@ export default function NewsItem({ news }) {
         title={!isSaved ? "Save this news article" : ""}
       >
         <span className="material-icons text-2xl">
-          {!isSaved && (
+          {!isSaved ? (
             <BsBookmarkFill
               className="text-indigo-500"
               onClick={() => {
                 handleSaveArticle(news);
               }}
             />
+          ) : (
+            <AiFillDelete className="text-indigo-500" />
           )}
         </span>
       </button>
