@@ -12,38 +12,38 @@ import Navbar from "./components/Navbar";
 import SavedArticles from "./pages/SavedArticles";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const location = useLocation();
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const location = useLocation();
 
-  useEffect(() => {
-    const jwtToken = getCookie("jwtToken");
-    if (jwtToken) {
-      setIsLoggedIn(true);
-    } else {
-      setIsLoggedIn(false);
-    }
-  }, [location]);
+    useEffect(() => {
+        const jwtToken = getCookie("jwtToken");
+        if (jwtToken) {
+            setIsLoggedIn(true);
+        } else {
+            setIsLoggedIn(false);
+        }
+    }, [location]);
 
-  return (
-    <div className={`${isLoggedIn && "mt-20"}`}>
-      <Toaster />
+    return (
+        <div className={`${isLoggedIn && "mt-20"}`}>
+            <Toaster />
 
-      <div>
-        {isLoggedIn && <Navbar />}
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/news" element={<NewsSummary />} />
-          <Route
-            path="/article/:articleId/:department"
-            element={<ArticlePage />}
-          />
-          <Route path="/profile" element={<UserProfile />} />
-          <Route path="/savedarticles" element={<SavedArticles />} />
-        </Routes>
-      </div>
-    </div>
-  );
+            <div>
+                {isLoggedIn && <Navbar />}
+                <Routes>
+                    <Route path="/" element={<Login />} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/news" element={<NewsSummary />} />
+                    <Route
+                        path="/article/:articleId/:department"
+                        element={<ArticlePage />}
+                    />
+                    <Route path="/profile" element={<UserProfile />} />
+                    <Route path="/savedarticles" element={<SavedArticles />} />
+                </Routes>
+            </div>
+        </div>
+    );
 }
 
 export default App;
