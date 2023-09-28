@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom"; // Import Link from react-router-dom
 import { getCookie } from "../Utils/cookieUtils";
-import NewsItem from "./NewsItem";
-import db from "../../firebase";
+import axiosInstance from "../api/axiosInstance";
+import SavedNewsItem from "./SavedNewsItem";
 
 // Dummy data for news articles with images
 
-function NewsSummary() {
+function SavedArticles() {
   const [filter, setFilter] = useState("All"); // Default filter
   const [sortOrder, setSortOrder] = useState("asc"); // Default sorting order
   const [fetchedNews, setFetchedNews] = useState([]);
@@ -37,17 +37,26 @@ function NewsSummary() {
   }, [filter, fetchedNews, sortOrder]);
 
   useEffect(() => {
-    // read data from firebase firestore
-    const fetchNews = async () => {
-      // fetch all documents from news collection in firebase
-      db.collection("news").onSnapshot((snapshot) => {
-        console.log(snapshot.docs.map((doc) => doc.data()));
-        setFetchedNews(snapshot.docs.map((doc) => doc.data()));
-      });
-    };
+    // Fetch all articles when the component mounts
+    async function fetchArticles() {
+      try {
+        const response = await axiosInstance.get("/articles/getuserarticles");
+        setFetchedNews(response.data);
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error fetching articles:", error);
+      }
+    }
 
-    fetchNews();
+    fetchArticles();
   }, []);
+
+  const onDelete = (articleId) => {
+    // Update the state to remove the deleted article
+    setNews((prevNews) =>
+      prevNews.filter((newsItem) => newsItem._id !== articleId)
+    );
+  };
 
   return (
     <div className="bg-gray-100 min-h-screen p-4">
@@ -108,9 +117,11 @@ function NewsSummary() {
             <option value="desc">Sort by Date (Desc)</option>
           </select>
         </div>
+
+        {/* News articles */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-          {news.map((news, i) => (
-            <NewsItem news={news} key={i} />
+          {news.map((newsItem, i) => (
+            <SavedNewsItem news={newsItem} key={i} onDelete={onDelete} />
           ))}
         </div>
       </div>
@@ -118,4 +129,4 @@ function NewsSummary() {
   );
 }
 
-export default NewsSummary;
+export default SavedArticles;
