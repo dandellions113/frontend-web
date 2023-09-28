@@ -78,31 +78,31 @@ function SavedArticles() {
 
           <button
             className={`sm:px-8 sm:py-2 px-4 text-sm sm:text-base py-1 border rounded-full ${
-              filter === "Positive"
+              filter === "positive"
                 ? "bg-green-500 text-white"
                 : "bg-white hover:bg-green-200"
             }`}
-            onClick={() => setFilter("Positive")}
+            onClick={() => setFilter("positive")}
           >
             Positive
           </button>
           <button
             className={`sm:px-8 sm:py-2 px-4 text-sm sm:text-base py-1 border rounded-full ${
-              filter === "Neutral"
+              filter === "neutral"
                 ? "bg-gray-500 text-white"
                 : "bg-white hover:bg-gray-200"
             }`}
-            onClick={() => setFilter("Neutral")}
+            onClick={() => setFilter("neutral")}
           >
             Neutral
           </button>
           <button
             className={`sm:px-8 sm:py-2 px-4 text-sm sm:text-base py-1 border rounded-full ${
-              filter === "Negative"
+              filter === "negative"
                 ? "bg-red-500 text-white"
                 : "bg-white hover:bg-red-200"
             }`}
-            onClick={() => setFilter("Negative")}
+            onClick={() => setFilter("negative")}
           >
             Negative
           </button>

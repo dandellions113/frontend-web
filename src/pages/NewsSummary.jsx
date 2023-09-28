@@ -69,31 +69,31 @@ function NewsSummary() {
 
           <button
             className={`sm:px-8 sm:py-2 px-4 text-sm sm:text-base py-1 border rounded-full ${
-              filter === "Positive"
+              filter === "positive"
                 ? "bg-green-500 text-white"
                 : "bg-white hover:bg-green-200"
             }`}
-            onClick={() => setFilter("Positive")}
+            onClick={() => setFilter("positive")}
           >
             Positive
           </button>
           <button
             className={`sm:px-8 sm:py-2 px-4 text-sm sm:text-base py-1 border rounded-full ${
-              filter === "Neutral"
+              filter === "neutral"
                 ? "bg-gray-500 text-white"
                 : "bg-white hover:bg-gray-200"
             }`}
-            onClick={() => setFilter("Neutral")}
+            onClick={() => setFilter("neutral")}
           >
             Neutral
           </button>
           <button
             className={`sm:px-8 sm:py-2 px-4 text-sm sm:text-base py-1 border rounded-full ${
-              filter === "Negative"
+              filter === "negative"
                 ? "bg-red-500 text-white"
                 : "bg-white hover:bg-red-200"
             }`}
-            onClick={() => setFilter("Negative")}
+            onClick={() => setFilter("negative")}
           >
             Negative
           </button>
@@ -109,8 +109,8 @@ function NewsSummary() {
           </select>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-          {news.map((news, i) => (
-            <NewsItem news={news} key={i} />
+          {news.map((newsItem, i) => (
+            <NewsItem news={newsItem} key={i} />
           ))}
         </div>
       </div>
