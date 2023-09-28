@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import { useEffect, useState } from "react";
 import { getCookie } from "./Utils/cookieUtils";
 import Navbar from "./components/Navbar";
+import SavedArticles from "./pages/SavedArticles";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -35,6 +36,7 @@ function App() {
           <Route path="/news" element={<NewsSummary />} />
           <Route path="/article" element={<ArticlePage />} />
           <Route path="/profile" element={<UserProfile />} />
+          <Route path="/savedarticles" element={<SavedArticles />} />
         </Routes>
       </div>
     </div>

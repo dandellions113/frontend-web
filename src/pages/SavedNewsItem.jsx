@@ -1,13 +1,12 @@
 // NewsItem.js
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { BsBookmarkFill } from "react-icons/bs";
 import axiosInstance from "../api/axiosInstance";
+import { AiFillDelete } from "react-icons/ai";
 import toast from "react-hot-toast";
 
-export default function NewsItem({ news }) {
-  // Define state to track whether the news article is saved or not
-  const [isSaved, setIsSaved] = useState(false);
+export default function SavedNewsItem({ news, onDelete }) {
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const getStyles = () => {
     if (news.sentiment === "negative") {
@@ -21,31 +20,24 @@ export default function NewsItem({ news }) {
     }
   };
 
-  // Function to handle saving/un-saving the news article
-  const toggleSave = () => {
-    setIsSaved(!isSaved);
-  };
-
-  const handleSaveArticle = async (article) => {
+  const handleDelete = async () => {
+    const confirmDelete = window.confirm("Are you sure you want to delete?");
     try {
-      const res = await axiosInstance.post("/articles", article);
-
-      console.log(res.status, res.data.error);
-
-      // Article saved successfully
-      toast.success("Article saved successfully!");
-      setIsSaved(true);
-    } catch (error) {
-      if (
-        error.response.status === 400 &&
-        error.response.data.error === "Article is already saved."
-      ) {
-        // Article is already saved
-        toast.error("This article is already saved.");
-      } else {
-        // Handle other response statuses as needed
-        toast.error("Error saving article.");
+      if (!confirmDelete) {
+        return;
       }
+      setIsDeleting(true);
+      // Send a DELETE request to your backend API with the article ID
+      const res = await axiosInstance.delete(`/articles/${news._id}`);
+      // Notify the parent component that the article has been deleted
+      toast.success("Article deleted successfully!");
+      console.log(res);
+      onDelete(news._id);
+    } catch (error) {
+      console.error("Error deleting article:", error);
+      toast.error("Error deleting article.");
+    } finally {
+      setIsDeleting(false);
     }
   };
 
@@ -103,20 +95,19 @@ export default function NewsItem({ news }) {
         </div>
       </dl>
 
-      {/* Save button/icon */}
       <button
         className={`absolute bottom-8 right-2 p-1 rounded-full `}
-        onClick={toggleSave}
-        title={!isSaved ? "Save this news article" : ""}
+        title={"Delete this news article"}
+        onClick={handleDelete}
+        disabled={isDeleting}
       >
         <span className="material-icons text-2xl">
-          {!isSaved && (
-            <BsBookmarkFill
-              className="text-indigo-500"
-              onClick={() => {
-                handleSaveArticle(news);
-              }}
-            />
+          {isDeleting ? (
+            // Show a loading icon while deleting
+            <span className="animate-spin text-gray-400">...</span>
+          ) : (
+            // Show the delete icon
+            <AiFillDelete className="text-indigo-500" />
           )}
         </span>
       </button>
@@ -125,7 +116,3 @@ export default function NewsItem({ news }) {
     </div>
   );
 }
-
-NewsItem.propTypes = {
-  news: PropTypes.object.isRequired,
-};
