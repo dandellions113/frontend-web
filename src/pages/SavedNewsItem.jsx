@@ -1,6 +1,5 @@
 // NewsItem.js
 import { useState } from "react";
-import PropTypes from "prop-types";
 import axiosInstance from "../api/axiosInstance";
 import { AiFillDelete } from "react-icons/ai";
 import toast from "react-hot-toast";
@@ -53,11 +52,11 @@ export default function SavedNewsItem({ news, onDelete }) {
       <div className="sm:flex sm:justify-between sm:gap-4">
         <div>
           <h3 className="text-lg font-bold text-gray-900 sm:text-xl">
-            {news.Headline}
+            {news.title}
           </h3>
 
           <p className="mt-1 text-xs font-medium text-gray-600">
-            <span className="font-bold">{news.Timestamp}</span>
+            <span className="font-bold">{news["published date"]}</span>
           </p>
         </div>
 
@@ -65,9 +64,7 @@ export default function SavedNewsItem({ news, onDelete }) {
           <img
             alt="News"
             src={
-              news.cms
-                ? "https://images.pexels.com/photos/159652/table-food-book-newspaper-159652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                : news.Img
+              "https://images.pexels.com/photos/159652/table-food-book-newspaper-159652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             }
             className="h-28 w-28 rounded-lg object-cover shadow-sm"
           />
@@ -76,8 +73,8 @@ export default function SavedNewsItem({ news, onDelete }) {
 
       <div className="mt-4">
         <p className="text-sm text-gray-500">
-          {news.Description.length > 0 &&
-            news.Description.split(" ").slice(0, 40).join(" ")}{" "}
+          {news.description.length > 0 &&
+            news.description.split(" ").slice(0, 40).join(" ")}{" "}
           <span className="text-blue-500 hover:text-blue-700">
             Continue reading...
           </span>
@@ -87,12 +84,12 @@ export default function SavedNewsItem({ news, onDelete }) {
       <dl className="flex gap-4 sm:gap-6 mt-5">
         <div className="flex flex-col-reverse">
           <dt className="text-sm font-medium text-gray-600">Neutral</dt>
-          <dd className="text-sm text-gray-500">Sentiment</dd>
+          <dd className="text-sm text-gray-500">{news.sentiment}</dd>
         </div>
 
         <div className="flex flex-col-reverse">
           <dt className="text-sm font-medium text-gray-600">
-            {Math.round(news.Description.split(" ").length / 20) + 1} m
+            {Math.round(news.description.split(" ").length / 20) + 1} m
           </dt>
           <dd className="text-xs text-gray-500">Reading time</dd>
         </div>

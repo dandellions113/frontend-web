@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom"; // Import Link from react-router-dom
+import { useNavigate } from "react-router-dom"; // Import Link from react-router-dom
 import { getCookie } from "../Utils/cookieUtils";
 import NewsItem from "./NewsItem";
 import db from "../../firebase";
+import axiosInstance from "../api/axiosInstance";
 
 // Dummy data for news articles with images
 
@@ -12,6 +13,16 @@ function NewsSummary() {
   const [fetchedNews, setFetchedNews] = useState([]);
   const [news, setNews] = useState([]);
   const navigate = useNavigate();
+  const [department, setDepartment] = useState("");
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      const { data } = await axiosInstance.get("/users/profile");
+      console.log(data.department);
+      setDepartment(data.department);
+    };
+    fetchProfile();
+  }, []);
 
   useEffect(() => {
     const jwtToken = getCookie("jwtToken");
@@ -40,19 +51,21 @@ function NewsSummary() {
     // read data from firebase firestore
     const fetchNews = async () => {
       // fetch all documents from news collection in firebase
-      db.collection("news").onSnapshot((snapshot) => {
-        console.log(snapshot.docs.map((doc) => doc.data()));
+      db.collection(department).onSnapshot((snapshot) => {
+        console.log(
+          snapshot.docs.map((doc) => doc.data()),
+          "data"
+        );
         setFetchedNews(snapshot.docs.map((doc) => doc.data()));
       });
     };
 
     fetchNews();
-  }, []);
+  }, [department]);
 
   return (
     <div className="bg-gray-100 min-h-screen p-4">
       <div className="max-w-5xl mx-auto">
-        {/* Filter buttons */}
         <div className="flex flex-wrap justify-center space-x-4 space-y-4 md:space-y-0 mb-8">
           <button></button>
 
@@ -98,7 +111,6 @@ function NewsSummary() {
             Negative
           </button>
 
-          {/* Sorting dropdown */}
           <select
             className="px-8 py-2 border rounded-full bg-white hover:bg-gray-200 outline-none             sm:px-8 sm:py-2 text-sm sm:text-base "
             value={sortOrder}
@@ -110,7 +122,7 @@ function NewsSummary() {
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
           {news.map((newsItem, i) => (
-            <NewsItem news={newsItem} key={i} />
+            <NewsItem news={newsItem} department={department} key={i} />
           ))}
         </div>
       </div>

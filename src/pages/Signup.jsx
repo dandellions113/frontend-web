@@ -18,16 +18,23 @@ function Signup() {
   const navigate = useNavigate();
 
   const departments = [
-    "Department 1",
-    "Department 2",
-    "Department 3",
+    { value: "defence", text: "Ministry of Defence" },
+    { value: "education", text: "Ministry of Education of India" },
+    { value: "finance", text: "Ministry of Finance of India" },
+    {
+      value: "health",
+      text: "Ministry of Health and Family Welfare, Government of India",
+    },
+    { value: "railway", text: "Ministry of Railways of India" },
     // Add more department options here
   ];
 
   const regions = [
-    "Region 1",
-    "Region 2",
-    "Region 3",
+    { value: "en", text: "english" },
+    { value: "hi", text: "hindi" },
+    { value: "pa", text: "punjabi" },
+    { value: "te", text: "telugu" },
+    { value: "ta", text: "tamil" },
     // Add more region options here
   ];
 
@@ -236,9 +243,9 @@ function Signup() {
               required
             >
               <option value="">Select Department</option>
-              {departments.map((option) => (
-                <option key={option} value={option}>
-                  {option}
+              {departments.map(({ value, text }) => (
+                <option key={value} value={value}>
+                  {text}
                 </option>
               ))}
             </select>
@@ -256,9 +263,9 @@ function Signup() {
               required
             >
               <option value="">Select Region</option>
-              {regions.map((option) => (
-                <option key={option} value={option}>
-                  {option}
+              {regions.map(({ value, text }) => (
+                <option key={value} value={value}>
+                  {text}
                 </option>
               ))}
             </select>

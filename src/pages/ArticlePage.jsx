@@ -11,13 +11,13 @@ import db from "../../firebase";
 
 function ArticlePage() {
   const navigate = useNavigate();
-  const { articleId } = useParams();
+  const { articleId, department } = useParams();
 
   const [articleData, setArticleData] = useState({});
   useEffect(() => {
     const fetchArticle = async () => {
       // fetch doc corresponding to articleId from firebase
-      db.collection("news")
+      db.collection(department)
         .doc(articleId)
         .onSnapshot((snapshot) => {
           console.log(snapshot.data());
@@ -26,7 +26,7 @@ function ArticlePage() {
     };
 
     fetchArticle();
-  }, [articleId]);
+  }, [articleId, department]);
 
   useEffect(() => {
     const jwtToken = getCookie("jwtToken");
@@ -39,26 +39,27 @@ function ArticlePage() {
     <div className="bg-gray-100 min-h-screen p-4">
       <div className="max-w-4xl mx-auto ">
         <h1 className="sm:text-5xl text-4xl sm:text-center font-bold  my-8 text-indigo-500">
-          {articleData.Headline}
+          {articleData.title}
         </h1>
         <div className="bg-white  shadow-md text-indigo-500 p-12 rounded-md ">
           <img
             src={
-              articleData.cms
-                ? "https://images.pexels.com/photos/159652/table-food-book-newspaper-159652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                : articleData.Img
+              "https://images.pexels.com/photos/159652/table-food-book-newspaper-159652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             }
-            alt={`Image for ${articleData.Headline}`}
+            alt={`Image for ${articleData.title}`}
             className="w-full h-auto mb-4 rounded-xl max-h-[32rem] object-cover"
           />
           <div className="flex items-center justify-center ">
             <p className=" mb-4 font-semibold  flex items-center  mr-4">
               <FaSourcetree className="mr-2 " />{" "}
-              <span>{articleData.Timestamp}</span>
+              <span>{articleData["published date"]}</span>
             </p>
             <p className="mb-4 font-semibold  flex items-center mr-4">
               <BiSolidTimeFive className="mr-2 " />{" "}
-              <span className="font-bold"> {articleData.Timestamp} </span>
+              <span className="font-bold">
+                {" "}
+                {articleData["published date"]}{" "}
+              </span>
             </p>
             <p className="mb-4 font-semibold  flex items-center mr-4">
               <MdLocationOn className="mr-2 " />{" "}
@@ -69,11 +70,11 @@ function ArticlePage() {
               <GrStatusCriticalSmall className="mr-2" />
               <span
                 className={`font-semibold ${
-                  articleData.sentiment === "Negative" &&
+                  articleData.sentiment === "negative" &&
                   "text-red-500  bg-white rounded-full font-bold "
                 }
               ${
-                articleData.sentiment === "Positive" &&
+                articleData.sentiment === "positive" &&
                 "text-green-500   bg-white rounded-full font-bold  "
               }
 
@@ -91,17 +92,14 @@ function ArticlePage() {
 
           {/* Article content */}
           <div className="text-gray-800 md:text-xl sm:text-lg text-sm font-serif leading-7">
-            {articleData.content}
+            {articleData.description}
           </div>
-        </div>
-        <div className="text-center mt-4">
-          {/* Optional: Add a back button to return to the news summary page */}
-          {/* <Link
-            to="/news" // Replace with the actual route to your news summary page
-            className="px-4 py-2 border rounded bg-blue-500 text-white hover:bg-blue-600"
-          >
-            Back to News Summary
-          </Link> */}
+
+          <div className=" mt-4 text-blue underline">
+            <Link rel={"_blank"} to={`${articleData.url}`}>
+              Read the complete article from the source itself !
+            </Link>
+          </div>
         </div>
       </div>
     </div>
