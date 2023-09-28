@@ -34,7 +34,10 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/news" element={<NewsSummary />} />
-          <Route path="/article/:articleId" element={<ArticlePage />} />
+          <Route
+            path="/article/:articleId/:department"
+            element={<ArticlePage />}
+          />
           <Route path="/profile" element={<UserProfile />} />
           <Route path="/savedarticles" element={<SavedArticles />} />
         </Routes>
